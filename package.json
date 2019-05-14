@@ -1,0 +1,36 @@
+{
+  "name": "zepkit",
+  "version": "1.0.0",
+  "description": "Truffle box containing React, ZeppelinOS & OpenZeppelin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-blank": "rm -rf client/src && cp -rf barebones/src client/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrecuero/zepkit.git"
+  },
+  "keywords": [
+    "zeppelinos",
+    "openzeppelin",
+    "truffle",
+    "react"
+  ],
+  "author": "Ramon Recuero <ramon@dapis.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrecuero/zepkit/issues"
+  },
+  "homepage": "https://github.com/rrecuero/zepkit#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "openzeppelin-eth": "^2.1.3",
+    "truffle-hdwallet-provider": "^1.0.3",
+    "zos-lib": "2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "openzeppelin-test-helpers": "^0.3.0"
+  }
+}
