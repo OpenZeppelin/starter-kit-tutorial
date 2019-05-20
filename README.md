@@ -83,7 +83,7 @@ npm run build
 
 * __Where can I find more documentation?__
 
-    This box is a marriage of [ZeppelinOS](https://zeppelinos.org//) and a React setup created with [create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). Either one would be a great place to start!
+    This kit is a marriage of [ZeppelinOS](https://zeppelinos.org//) and a React setup created with [create-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). Either one would be a great place to start!
 
 ## Quick Command Reference
 
