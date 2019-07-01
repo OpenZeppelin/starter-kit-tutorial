@@ -70,6 +70,7 @@ class App extends Component {
             instance = new web3.eth.Contract(Counter.abi, deployedNetwork && deployedNetwork.address);
           }
         }
+        console.log(instance);
         if (Wallet.networks) {
           deployedNetwork = Wallet.networks[networkId.toString()];
           if (deployedNetwork) {
