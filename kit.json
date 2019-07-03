@@ -5,6 +5,7 @@
     "LICENSE",
     "client",
     "contracts",
+    "build",
     "migrations",
     "package.json",
     "solhint.json",
