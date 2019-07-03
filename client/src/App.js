@@ -37,8 +37,8 @@ class App extends Component {
     let Counter = {};
     let Wallet = {};
     try {
-      Counter = require('../../contracts/Counter.sol');
-      Wallet = require('../../contracts/Wallet.sol');
+      Counter = require('../../build/contracts/Counter.json');
+      Wallet = require('../../build/contracts/Wallet.json');
     } catch (e) {
       console.log(e);
     }
