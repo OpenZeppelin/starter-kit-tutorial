@@ -31,6 +31,6 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "openzeppelin-test-helpers": "^0.3.0",
-    "zos": "^2.3.0"
+    "zos": "^2.4.1"
   }
 }
