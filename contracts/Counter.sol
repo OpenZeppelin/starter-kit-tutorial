@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 // import "openzeppelin-eth/contracts/ownership/Ownable.sol";
-import "zos-lib/contracts/Initializable.sol";
+import "@openzeppelin/upgrades/contracts/Initializable.sol";
 
 contract Counter is Initializable {
   //it keeps a count to demonstrate stage changes
@@ -29,9 +29,9 @@ contract Counter is Initializable {
 
   //We'll upgrade the contract with this function after deploying it
   //Function to decrease the counter
-  // function decreaseCounter(uint256 amount) public returns (bool) {
-  //   require(count > amount, "Cannot be lower than 0");
-  //   count = count - amount;
-  //   return true;
-  // }
+  function decreaseCounter(uint256 amount) public returns (bool) {
+    require(count > amount, "Cannot be lower than 0");
+    count = count - amount;
+    return true;
+  }
 }

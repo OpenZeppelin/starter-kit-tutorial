@@ -21,7 +21,7 @@ npm install -g truffle@5.0.2 ganache-cli@6.3.0 @openzeppelin/cli@2.5.0
 Ensure you are in a new and empty directory, and run the `unpack` command with `tutorial` to create a starter project:
 
 ```javascript
-zos unpack tutorial
+openzeppelin unpack tutorial
 ```
 
 ## Run
@@ -48,27 +48,25 @@ npm run start
 
 ## Interact
 
-You can interact directly with your smart contracts from the `openzeppelin` cli. 
+You can interact directly with your smart contracts from the `openzeppelin` cli.
 
-   `openzeppelin transfer`                                        	
-   
-   send funds to a given address.
+`openzeppelin transfer`
 
-   `openzeppelin balance [address]`                               	
-   
-   query the ETH balance of the specified account, also supports ERC20s.
+send funds to a given address.
 
-   `openzeppelin send-tx`                                         	
-   
-   sends a transaction to your contract and returns the events.
+`openzeppelin balance [address]`
 
-   `openzeppelin call`                                           	
-   
-   execute a constant method and receive back the value.
+query the ETH balance of the specified account, also supports ERC20s.
 
+`openzeppelin send-tx`
+
+sends a transaction to your contract and returns the events.
+
+`openzeppelin call`
+
+execute a constant method and receive back the value.
 
 Type `openzeppelin` to see a complete list of availible commands.
-
 
 ## Test
 
@@ -100,14 +98,14 @@ npm run build
 
 ## FAQ
 
-* __How do I use this with the Ganache-CLI?__
+- **How do I use this with the Ganache-CLI?**
 
-    It's as easy as modifying the config file! [Check out our documentation on adding network configurations](http://truffleframework.com/docs/advanced/configuration#networks). Depending on the port you're using, you'll also need to update line 29 of `client/src/utils/getWeb3.js`.
+  It's as easy as modifying the config file! [Check out our documentation on adding network configurations](http://truffleframework.com/docs/advanced/configuration#networks). Depending on the port you're using, you'll also need to update line 29 of `client/src/utils/getWeb3.js`.
 
-* __Where is my production build?__
+- **Where is my production build?**
 
-    The production build will be in the `client/build` folder after running `npm run build` in the `client` folder.
+  The production build will be in the `client/build` folder after running `npm run build` in the `client` folder.
 
-* __Where can I find more documentation?__
+- **Where can I find more documentation?**
 
-    Check out the [OpenZeppelin Starter Kits documentation](https://docs.openzeppelin.com/start).
+  Check out the [OpenZeppelin Starter Kits documentation](https://docs.openzeppelin.com/starter-kits/).
