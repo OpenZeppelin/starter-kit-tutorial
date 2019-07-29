@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.scss';
-import logo from './zk_logo.svg';
+import logo from './stater-kits-logo.png';
 
 const Header = () => (
   <div className={styles.header}>
@@ -8,7 +8,7 @@ const Header = () => (
       <div className={styles.brand}>
         <a href="/" className={styles.link}>
           {' '}
-          {/* <img src={logo} alt="logo" /> */}
+          {<img src={logo} alt="logo" />}
         </a>
       </div>
       <ul>
