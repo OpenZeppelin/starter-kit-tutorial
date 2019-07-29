@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './footer.module.scss';
 // import logo from './logo-red.png'
 import mail from './mail.svg';
-import pencil from './pencil.svg';
 import twitter from './twitter.svg';
 import github from './github.svg';
 import zeppelin from './zeppelin_logo.png';
