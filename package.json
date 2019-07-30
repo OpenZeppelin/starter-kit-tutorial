@@ -4,6 +4,7 @@
   "description": "OpenZeppelin kit containing React, & OpenZeppelin SDK",
   "main": "index.js",
   "scripts": {
+    "build-contracts": "openzeppelin compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
