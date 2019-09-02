@@ -69,3 +69,5 @@ build
 .zos.session
 
 .vscode
+
+.openzeppelin/.session
