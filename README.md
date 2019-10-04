@@ -39,6 +39,12 @@ and follow the prompts:
 openzeppelin init
 ```
 
+After that compile the contracts:
+
+```javascript
+openzeppelin compile
+```
+
 In a new terminal window, in the `client` directory, run the React app:
 
 ```javascript
