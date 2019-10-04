@@ -102,6 +102,10 @@ To build the application for production, use the build script. A production buil
 npm run build
 ```
 
+## Hot Loader
+
+[Solidity Hot Loader](https://github.com/OpenZeppelin/solidity-loader) allows seamless updates to frontend by just editing and saving Solidity code. To enable change `disabled` flag in `client/config/webpack.js` file to `false`.
+
 ## FAQ
 
 - **How do I use this with the Ganache-CLI?**
