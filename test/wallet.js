@@ -1,28 +1,30 @@
+const { accounts, contract, web3, defaultSender } = require('@openzeppelin/test-environment');
 const { BN, constants, expectEvent, shouldFail } = require('openzeppelin-test-helpers');
 const should = require('chai').should();
 
-const Wallet = artifacts.require('Wallet');
-const StandaloneERC20 = artifacts.require('StandaloneERC20');
+const Wallet = contract.fromArtifact('Wallet');
+const StandaloneERC20 = contract.fromArtifact('StandaloneERC20');
 
-contract("wallet", async ([_, owner, receiver, ...otherAccounts]) => {
+describe("wallet", async () => {
+  const [owner, receiver] = accounts;
   let wallet;
   let token;
 
   beforeEach(async function () {
-    wallet = await Wallet.new();
-    wallet.initialize(owner);
-    token = await StandaloneERC20.new();
-    token.initialize('Token', 'TKN', 18, 1000, owner, [], []);
+    wallet = await Wallet.deploy().send();
+    await wallet.methods.initialize(owner).send();
+    token = await StandaloneERC20.deploy().send();
+    await token.methods.initialize('Token', 'TKN', 18, 1000, owner, [], []).send();
   });
 
   it("should have proper owner", async () => {
-    (await wallet.owner()).should.equal(owner);
+    (await wallet.methods.owner().call()).should.equal(owner);
   });
 
   it("should transfer ERC20 tokens from wallet to receiver", async () => {
-    await token.transfer(wallet.address, 100, { from: owner });
-    await wallet.transferERC20(token.address, receiver, 10, { from: owner });
-    (await token.balanceOf(receiver)).should.bignumber.equal(new BN(10));
+    await token.methods.transfer(wallet._address, 100).send({from: owner});
+    await wallet.methods.transferERC20(token._address, receiver, '10').send({ from: owner });
+    (await token.methods.balanceOf(receiver).call()).should.be.equal('10');
   });
   
 });

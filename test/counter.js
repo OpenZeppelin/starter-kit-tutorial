@@ -1,29 +1,32 @@
+const { accounts, contract, web3, defaultSender } = require('@openzeppelin/test-environment');
 const { BN, constants, expectEvent, shouldFail } = require('openzeppelin-test-helpers');
 const should = require('chai').should();
 
-const Counter = artifacts.require('Counter');
+const Counter = contract.fromArtifact('Counter');
 
-contract("counter", async ([_, owner, ...otherAccounts]) => {
+describe("counter", async () => {
+  const [owner] = accounts;
   let counter;
-  const value = new BN(9999);
-  const add = new BN(1);
+  const value = '9999';
+  const add = '1';
+  const total = '10000';
 
   beforeEach(async function () {
-    counter = await Counter.new();
-    counter.initialize(value, { from: owner });
+    counter = await Counter.deploy().send();
+    await counter.methods.initialize(value).send({from: owner});
   });
-  
+
   it("should have proper owner", async () => {
-    (await counter.owner()).should.equal(owner);
+    (await counter.methods.owner().call()).should.equal(owner);
   });
 
   it("should have proper default value", async () => {
-    (await counter.getCounter()).should.bignumber.equal(value);
+    (await counter.methods.getCounter().call()).should.be.equal(value);
   });
 
   it("should increase counter value", async () => {
-    await counter.increaseCounter(add);
-    (await counter.getCounter()).should.bignumber.equal(value.add(add));
+    await counter.methods.increaseCounter(add).send();
+    (await counter.methods.getCounter().call()).should.be.equal(total);
   });
 
 });

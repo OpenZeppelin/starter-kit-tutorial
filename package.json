@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-contracts": "openzeppelin compile",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx mocha --exit --recursive test",
     "pre-push": "cd client && npm run pre-push",
     "pre-commit": "cd client && npm run pre-commit"
   },
@@ -40,6 +40,7 @@
   "homepage": "https://github.com/OpenZeppelin/starter-kit-tutorial#readme",
   "dependencies": {
     "@openzeppelin/contracts-ethereum-package": "^2.4.0",
+    "@openzeppelin/test-environment": "^0.1.1",
     "@openzeppelin/upgrades": "^2.6.0",
     "dotenv": "^8.2.0",
     "truffle-hdwallet-provider": "^1.0.17"
@@ -48,6 +49,7 @@
     "@openzeppelin/cli": "^2.6.0",
     "chai": "^4.2.0",
     "husky": "^3.1.0",
+    "mocha": "^6.2.2",
     "openzeppelin-test-helpers": "^0.5.1"
   }
 }
