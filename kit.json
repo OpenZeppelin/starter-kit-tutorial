@@ -10,7 +10,7 @@
     "package.json",
     "solhint.json",
     "test",
-    "truffle-config.js"
+    "networks.js"
   ],
   "hooks": {
     "post-unpack": "npm install && cd client && npm install"
