@@ -1,6 +1,6 @@
 # OpenZeppelin Starter Kit Tutorial
 
-An OpenZeppelin Starter Kit Tutorial containing React, OpenZeppelin SDK, OpenZeppelin Contracts, Truffle and Infura.
+An OpenZeppelin Starter Kit Tutorial containing React, OpenZeppelin SDK, OpenZeppelin Contracts, and Infura.
 
 This kit comes with everything you need to start using upgradeable Smart
 contracts inside your applications. It also includes all the configuration
@@ -10,10 +10,10 @@ In addition to the contents included in the [vanilla Starter Kit](https://github
 
 ## Requirements
 
-Install OpenZeppelin SDK, Ganache, and Truffle
+Install OpenZeppelin SDK, Ganache.
 
 ```
-npm install -g truffle@5.0.41 ganache-cli@6.7.0 @openzeppelin/cli@2.5.3
+npm install ganache-cli@6.7.0 @openzeppelin/cli@2.5.3
 ```
 
 ## Installation
@@ -76,19 +76,17 @@ Type `openzeppelin` to see a complete list of availible commands.
 
 ## Test
 
-Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the truffle development console.
+This starter kit uses [Test Environemnt](https://github.com/OpenZeppelin/openzeppelin-test-environment/blob/master/README.md) for smart contracts tests. Tests are written with Mocha, [OpenZeppelin TestHelpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers) and Web3.js. `./test/counter.js` and `./test/wallet.js` files are good starting point for writing your own tests.
 
-```javascript
-// inside the development console.
-test
-
-// outside the development console..
-truffle test
+```bash
+npm run test
 ```
+
+During development it is helpful to run `nodemon -e sol,js -x 'oz compile && npm test -- --bail'`. This will rerun tests on changes at `.sol` and `.js` files.
 
 Jest is included for testing React components. Compile your contracts before running Jest, or you may receive some file not found errors.
 
-```javascript
+```bash
 // ensure you are inside the client directory when running this
 npm run test
 ```
@@ -107,10 +105,6 @@ npm run build
 [Solidity Hot Loader](https://github.com/OpenZeppelin/solidity-loader) allows seamless updates to frontend by just editing and saving Solidity code. To enable change `disabled` flag in `client/config/webpack.js` file to `false`.
 
 ## FAQ
-
-- **How do I use this with the Ganache-CLI?**
-
-  It's as easy as modifying the config file! [Check out our documentation on adding network configurations](http://truffleframework.com/docs/advanced/configuration#networks). Depending on the port you're using, you'll also need to update line 29 of `client/src/utils/getWeb3.js`.
 
 - **Where is my production build?**
 
