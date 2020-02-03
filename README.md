@@ -76,7 +76,7 @@ Type `npx openzeppelin` to see a complete list of availible commands.
 
 ## Test
 
-This starter kit uses [Test Environemnt](https://github.com/OpenZeppelin/openzeppelin-test-environment/blob/master/README.md) for smart contracts tests. Tests are written with Mocha, [OpenZeppelin TestHelpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers) and Web3.js. `./test/counter.js` and `./test/wallet.js` files are good starting point for writing your own tests.
+This starter kit uses [Test Environment](https://github.com/OpenZeppelin/openzeppelin-test-environment/blob/master/README.md) for smart contracts tests. Tests are written with Mocha, [OpenZeppelin TestHelpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers) and Web3.js. `./test/counter.js` and `./test/wallet.js` files are good starting point for writing your own tests.
 
 ```bash
 npm run test
