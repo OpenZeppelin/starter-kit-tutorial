@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/OpenZeppelin/starter-kit-tutorial#readme",
   "dependencies": {
-    "@openzeppelin/contracts-ethereum-package": "^2.4.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.5.0",
     "@openzeppelin/test-environment": "^0.1.1",
     "@openzeppelin/upgrades": "^2.6.0",
     "dotenv": "^8.2.0",
