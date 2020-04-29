@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PublicAddress, Button } from 'rimble-ui';
+import { EthAddress, Button } from 'rimble-ui';
 import styles from './Counter.module.scss';
 
 export default class Counter extends Component {
@@ -11,7 +11,7 @@ export default class Counter extends Component {
         <div className={styles.dataPoint}>
           <div className={styles.label}>Instance address:</div>
           <div className={styles.value}>
-            <PublicAddress address={contract._address} />
+            <EthAddress address={contract._address} />
           </div>
         </div>
         <div className={styles.dataPoint}>
