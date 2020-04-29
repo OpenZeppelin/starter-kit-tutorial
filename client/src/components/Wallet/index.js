@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PublicAddress, Button } from 'rimble-ui';
+import { EthAddress, Button } from 'rimble-ui';
 import styles from './Wallet.module.scss';
 
 export default class Wallet extends Component {
@@ -11,7 +11,7 @@ export default class Wallet extends Component {
         <div className={styles.dataPoint}>
           <div className={styles.label}>Instance address:</div>
           <div className={styles.value}>
-            <PublicAddress address={wallet._address} />
+            <EthAddress address={wallet._address} />
           </div>
         </div>
         <div className={styles.dataPoint}>
