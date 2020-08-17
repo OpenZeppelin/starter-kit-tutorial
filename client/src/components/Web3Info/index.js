@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PublicAddress, Blockie } from 'rimble-ui';
+import { EthAddress, Blockie } from 'rimble-ui';
 import styles from './Web3Info.module.scss';
 
 export default class Web3Info extends Component {
@@ -32,7 +32,7 @@ export default class Web3Info extends Component {
         <div className={styles.dataPoint}>
           <div className={styles.label}>Your address:</div>
           <div className={styles.value}>
-            <PublicAddress address={accounts[0]} />
+            <EthAddress address={accounts[0]} />
             <Blockie opts={{ seed: accounts[0], size: 15, scale: 3 }} />
           </div>
         </div>
